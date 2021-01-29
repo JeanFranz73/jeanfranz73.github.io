@@ -10,21 +10,6 @@
 
     <link href="cover.css" rel="stylesheet">
 
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
 </head>
 
 <body class="d-flex h-100 text-center text-white bg-dark">
@@ -47,14 +32,10 @@
             <h1>Tiny URL Generator</h1>
             <p class="lead">Powered by <a href="https://tinyurl.com/" target="_blank" class="text-white">TinyURL API</a></p>
             <p class="lead">
-                <form class="form-floating">
-                    <input class="form-control bg-dark text-white" id="link" placeholder=" ">
-                    <label>Paste the long URL here</label>
+                <form class="form-floating"><input class="form-control bg-dark text-white" id="link" placeholder=" ">
+                    <label for="link">Paste the long URL here</label>
                 </form>
-
-                <button type="submit" onclick="link()" class="mt-3 btn btn-lg btn-primary" data-bs-toggle="modal"
-                    data-bs-target="#resultado">Shorten URL</button>
-
+                <button type="submit" onclick="link()" class="mt-3 btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#resultado">Shorten URL</button>
             </p>
         </main>
 
@@ -63,16 +44,13 @@
                 <div class="modal-content bg-dark">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Tiny URL</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                            aria-label="Close"></button>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-
                         <div class="form-floating">
                             <input id="result" class="form-control bg-dark text-white" readonly>
-                            <label>Shortened URL</label>
+                            <label for="result">Shortened URL</label>
                         </div>
-
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal"
@@ -89,8 +67,7 @@
         </footer>
     </div>
 
+    <script src="script.js"></script>
 </body>
-
-<script src="script.js"></script>
 
 </html>
